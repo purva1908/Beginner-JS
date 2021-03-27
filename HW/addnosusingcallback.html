@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Use of callback fun</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- A callback is a function passed as an argument to another function
+
+This technique allows a function to call another function
+
+A callback function can run after another function has finished -->
+	<h1>Add two nos using call back function</h1>
+
+<script >
+	
+	addNumbersUsingCallback=function(a,b,callback)
+	{
+		var sum=callback(a,b);
+		return sum;
+
+	}
+	var add=function(a,b){
+		return a+b;
+	}
+	console.log(addNumbersUsingCallback(2,3,add));
+</script>
+</body>
+</html>

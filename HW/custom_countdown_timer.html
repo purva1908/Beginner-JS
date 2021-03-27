@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom countdown timer</title>
+</head>
+<body>
+	<h1><span>Countdown Timer</span></h1>
+
+	<div id="canvas" class="container group">
+		<div id="primaryContent" class="group">
+
+			<p> Input the time in minutes and click start</p>
+			<div id="inputArea"></div>
+			<h2 id="time"> 0:00</h2>
+		</div>
+	</div>
+
+<script>
+	var timerSeconds;
+var intervalHandle;
+
+function setUpTimer(){
+
+var timerInput=document.createElement("input");
+timerInput.setAttribute("type","text");
+timerInput.setAttribute("id","minutes");
+
+var button=document.createElement("input");
+button.setAttribute("type","button");
+button.setAttribute("value","Start Timer");
+
+button.onclick=function(){
+	startCounter();
+}
+
+document.getElementById("inputArea").appendChild(timerInput);
+doument.getelementById("inputArea").appendChild(button);
+
+}
+function tick(){
+	var timeDisplay=document.getElementById("time");
+
+	var min=Math.floor(timerSeconds/60);
+	var sec=timerSeconds-(min+60);
+
+	if(sec<10){
+		sec="0"+sec;
+	}
+
+	var ,essage=min.toString()+":"+sec;
+
+	timeDisplay.innerHTML=message;
+
+	if(timerSeconds===0){
+		alert("Done");
+		clearInterval(intervalHandle);
+		
+	}
+}
+</script>
+</body>
+</html>

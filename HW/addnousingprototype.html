@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>add 2 nos using prototype</p>
+
+<button onclick="myAdd()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+Number.prototype.myMethod = function() {
+  return this.valueOf();
+};
+
+function myAdd() {
+  var n1=5;
+  var n2=2;
+  var n = n1+n2;
+  document.getElementById("demo").innerHTML = n.myMethod();
+}
+</script>
+
+</body>
+</html>
+

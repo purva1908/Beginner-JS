@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add 2 ran nos </title>
+</head>
+<body>
+
+<script >
+	
+	addNumbersUsingCallback=function(a,b,callback)
+	{
+		var sum=callback(a,b);
+		return sum;
+
+	}
+	var add=function(a,b){
+		return a+b;
+	}
+	console.log(addNumbersUsingCallback(Math.random(),Math.random(),add));
+</script>
+
+</body>
+</html>
